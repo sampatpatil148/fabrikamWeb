@@ -1,0 +1,232 @@
+.p-content {
+	display: inline-block;
+	width: 34%;
+	vertical-align: top;
+	h1 {
+		color: $msv-black;
+		line-height: 63px;
+		margin: 0 0 8px 0;
+		font-size: 49px;
+		font-weight: $msv-font-weight-small;
+	}
+	h2 {
+		color: $msv-black;
+		font-weight: $msv-font-weight-medium;
+		font-size: $msv-font-size-xl;
+		line-height: 31px;
+		margin: 0;
+	}
+	p {
+		line-height: 21px;
+		margin: 20px 0;
+		font-size: 17px;
+		color: $msv-black;
+		font-weight: $msv-font-weight-light;
+	}
+	h3 {
+		color: $msv-black;
+		font-size: 17px;
+		font-weight: $msv-font-weight-medium;
+		margin-bottom: 1rem;
+		line-height: 21px;
+	}
+}
+.p-dropdown-area {
+	label {
+		font-size: $msv-font-size-l;
+		line-height: 24px;
+		color: $msv-black;
+		font-weight: $msv-font-weight-small;
+		width: 100%;
+	}
+	.p-select {
+		display: block;
+		width: 100%;
+		color: $msv-gray-tint;
+		background-color: $msv-white;
+		border-radius: 0;;
+		font-weight: $msv-font-weight-normal;
+		font-size: $msv-font-size-l;
+		line-height: 24px;
+		text-transform: none;
+		height: 48px;
+		padding: 4px 8px;
+		background-clip: border-box;
+		border-color: transparent;
+		position: relative;
+		outline-offset: 1px;
+	}
+}
+.p-quantity-area {
+	label {
+		font-size: $msv-font-size-l;
+		line-height: 24px;
+		color: $msv-black;
+		font-weight: $msv-font-weight-small;
+		width: 100%;
+	}
+	margin-top: 20px;
+	input {
+		&::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
+}
+.p-quantity-input {
+	margin-top: 2px;
+}
+.p-btn-q {
+	padding: 5px;
+	padding-left: 0;
+	padding-right: 0;
+	background: $msv-white;
+	background-position: center;
+	background-repeat: no-repeat;
+	@include border-1px(1px,solid, $msv-gray-100);
+	min-width: auto;
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+}
+.p-btn-q.disabled {
+	color: $msv-gray-300;
+}
+.p-input-q {
+	color: $msv-gray-tint;
+	background-color: $msv-white;
+	font-size: $msv-font-size-l;
+	line-height: 24px; 
+	height: 48px;
+	padding: 4px 8px;
+	border-color: transparent;
+	width: 80px;
+	display: inline-block;
+	margin-left: 8px;
+	margin-right: 8px;
+	padding: 5px;
+	text-align: center;
+}
+.p-addTocart {
+	margin-top: 20px;
+}
+.p-button-area {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.p-add-cart {
+	background: $msv-primary;
+	@include border-1px(1px,solid, $msv-primary);
+	color: $msv-white;
+	padding: 12px 20px;
+	min-width: 160px;
+	font-size: $msv-font-size-l;
+	line-height: 24px; 
+	flex-grow: 1;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	&:hover {
+		color: $msv-white;
+	}
+	&:focus {
+		@include outline-1px(1px,dashed, $msv-black);
+		@include border-1px(0px,dashed, $msv-transparent);
+	}
+	
+}
+.p-add-whislist {
+	color: $msv-primary;
+	font-size: $msv-font-size-xl;
+	background: $msv-white;
+	@include border-1px(1px,solid, $msv-primary);
+	padding: 6px 12px;
+	min-width: 48px;
+	width: 48px;
+	flex: 0 0 48px;
+	margin-left: 8px;
+	display: inline-block;
+	i {
+		font-weight: $msv-font-weight-large;
+	}
+	&:hover {
+		background: rgb(125 185 107 / 35%);
+		border-color: rgb(125 185 107 / 35%);
+		color: $msv-primary;
+	}
+	&:focus {
+		background: rgb(125 185 107 / 35%);
+		@include outline-1px(1px,dashed, $msv-black);
+	}
+}
+.p-findInStore {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: auto;
+	h4 {
+		font-weight: $msv-font-weight-light;
+		font-size: $msv-font-size-l;
+		line-height: 24px;
+	}
+	p {
+		margin: 8px 0;
+		font-size: $msv-font-size-s;
+		line-height: 18px;
+		font-weight: $msv-font-weight-medium;
+	}
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			list-style-type: none;
+			position: relative;
+			margin: 8px 0 8px 0px;
+			font-size: 14px;
+			i {
+				&.fa-check-circle {
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+}
+.p-btn {
+	padding: 12px 20px;
+	min-width: 160px;
+	line-height: 24px;
+	font-size: $msv-font-size-l;
+	background: $msv-white;
+	@include border-1px(1px,solid, $msv-primary);
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	color: $msv-black;
+	&:hover {
+		background: $msv-secondary-hover;
+		color: $msv-black;
+	}
+	&:focus {
+		@include outline-1px(1px,dashed, $msv-black);
+		@include border-1px(1px,dashed, $msv-white);
+	}
+}
+.star-area {
+	.p-details-star {
+		width: auto;
+	}
+}
+.p-details-star {
+	i {
+		margin: 0 4px 20px 0;
+	}
+}
+@media screen and (max-width: $msv-container-min-width-m) {
+    .p-content {
+        width: 100%;
+    }
+}

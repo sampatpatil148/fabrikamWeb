@@ -1,0 +1,12 @@
+.chat {
+	@include width-height(180px, 50px);
+	float: right;
+	position: absolute;
+	right: 87px;
+	img {
+		@include width-height(180px, auto);
+		position: fixed;
+		bottom: 18px;
+		border-radius: 35px;
+	}
+}

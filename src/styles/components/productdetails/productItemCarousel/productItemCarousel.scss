@@ -1,0 +1,26 @@
+.product-slider {
+	.item-carousel-container {
+		.carousel-container {
+			margin-bottom: 100px;
+		}
+	}
+}
+@media (max-width: $msv-breakpoint-l) {
+  .product-slider {
+    .item-carousel-container {
+      .carousel-container {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  }
+@media (min-width: $msv-breakpoint-319) and (max-width: $msv-breakpoint-422) {
+    .heading2 {
+        width: 185px;
+        }
+}
+@media (min-width: $msv-breakpoint-303) and (max-width: $msv-breakpoint-318) {
+    .heading-h2 .heading2{
+        width: 165px;
+    }
+}

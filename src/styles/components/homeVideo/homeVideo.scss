@@ -1,0 +1,319 @@
+.VideoPlayer {
+  padding-bottom: 20px;
+  .play_pause_btn {
+    @include width-height(2.5rem, 2.5rem);
+    &:focus {
+      @include outline-1px(1px, dashed, $msv-black);
+      outline-offset: -1.4px;
+      border: none!important;
+    }
+  }
+
+  .fullscreen_btn{
+    @include width-height(2.5rem, 2.5rem);
+  }
+
+  .mute_unmute_btn{
+    @include width-height(2.5rem, 2.5rem);
+    margin-left: -2px
+  }
+
+  .video-overlay {
+    height: 100%;
+    background: $msv-selected-user-background-color-light;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    cursor: pointer;
+    .fa-play {
+      color: $msv-white;
+    }
+    .play_pause_btn {
+      @include width-height(50px, 50px);
+      @include border-1px(2px, solid, $msv-white);
+      background: $msv-transparent;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      svg {
+        @include width-height(20px, 20px);
+      }
+      &:hover {
+        @include border-1px(2px, solid, $msv-primary);
+        cursor: context-menu;
+      }
+    }
+  }
+
+  .video-player {
+    button {
+      @include border-1px(1px, solid, $msv-primary);
+      background: $msv-white;
+      box-shadow: none;
+    }
+    .fa {
+      font-size: $msv-heading-text-size;
+    }
+  }
+
+  svg {
+    fill: $msv-black;
+    stroke: $msv-black;
+    cursor: pointer;
+    &.hide {
+      display: none;
+    }
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 8.4px;
+    background: transparent;
+    cursor: pointer;
+    &.time_range {
+      -webkit-appearance: none;
+      &::-moz-range-track {
+        @include width-height(100%, 12px);
+        @include border-1px(1px, solid, $msv-green-light);
+        background: $green-background;
+        box-shadow: 1px 1px 1px $box-shadow-video;
+        border-radius: 1px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      &::-moz-range-thumb {
+        @include width-height(23px, 23px);
+        @include border-1px(2px, solid, $green-border-video);
+        background: $video-thum-background;
+        box-shadow: 3px 3px 3px $thum-shadow;
+        border-radius: 23px;
+        cursor: pointer;
+      }
+      &::-webkit-slider-runnable-track {
+        @include width-height(100%, 6px);
+        background: $runable-track-background;
+        cursor: pointer;
+        transition: 0.2s;
+        border-radius: 0px;
+      }
+      &::-webkit-slider-thumb {
+        @include width-height(15px, 15px);
+        background: $msv-black;
+        border-radius: 50%;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -5px;
+      }
+      &::-ms-track {
+        @include width-height(100%, 12px);
+        background: $msv-transparent;
+        border-color: $msv-transparent;
+        color: $msv-transparent;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      &::-ms-fill-lower {
+        background: $video-thum-background;
+      }
+      &::-ms-fill-upper {
+        background: $video-thum-background;
+      }
+      &::-ms-thumb {
+        @include width-height(23px, 23px);
+        background: $video-thum-background;
+        margin-top: 1px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      &:focus {
+        outline: none;
+        &::-webkit-slider-runnable-track {
+          background: $runable-track-background;
+        }
+        &::-ms-fill-lower {
+          background: $video-thum-background;
+        }
+        &::-ms-fill-upper {
+          background: $video-thum-background;
+        }
+      }
+    }
+    &.volume_range {
+      box-shadow: 0px 0px 2px $msv-white;
+      -webkit-appearance: none;
+      background: linear-gradient(to right, $runable-track-background 50%, transparent 50%);
+      &::-webkit-slider-runnable-track {
+        @include width-height(100%, 10px);
+        cursor: pointer;
+        transition: 0.2s;
+        border-radius: 0px;
+      }
+      &::-webkit-slider-thumb {
+        @include width-height(10px, 30px);
+        background: $msv-black;
+        border-radius: 5px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -10px;
+      }
+      &::-moz-range-track {
+        @include width-height(100%, 12px);
+        @include border-1px(1px, solid, $msv-green-light);
+        box-shadow: 1px 1px 1px $box-shadow-video;
+        background: $green-background;
+        cursor: pointer;
+        transition: 0.2s;
+        border-radius: 1px;
+      }
+      &::-moz-range-thumb {
+        @include width-height(23px, 23px);
+        @include border-1px(2px, solid, $green-border-video);
+        box-shadow: 3px 3px 3px $thum-shadow;
+        background: $video-thum-background;
+        border-radius: 23px;
+        cursor: pointer;
+      }
+      &::-ms-track {
+        @include width-height(100%, 12px);
+        background: $msv-transparent;
+        border-color: $msv-transparent;
+        color: $msv-transparent;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      &::-ms-fill-lower {
+        background: $video-thum-background;
+      }
+      &::-ms-fill-upper {
+        background: $msv-black;
+      }
+      &:focus {
+        outline: none;
+        &::-ms-fill-lower {
+          background: $msv-black;
+        }
+        &::-ms-fill-upper {
+          background: $msv-black;
+        }
+      }
+    }
+  }
+
+  .volume-container {
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    .volume-wraper {
+      @include width-height(2.5rem, 152px);
+      background: $volume-container-bg;
+      position: absolute;
+      top: -151px;
+      left: -2px;
+      z-index: 999999;
+      display: none;
+      .volume_range {
+        transform: rotate(270deg);
+        position: absolute;
+        top: 48%;
+        left: -44px;
+      }
+    }
+    &:hover .volume-wraper {
+      display: block;
+    }
+  }
+  
+  .current-value {
+    position: absolute;
+    z-index: 99999;
+    top: 53px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    &.time-range-tooltip {
+      top: -16px;
+      width: auto;
+    }
+    .text-tooltip {
+      background: $msv-black;
+      color: $msv-white;
+      font-size: $msv-font-size-s;
+      padding: 2px 10px;
+      border-radius: 4px;
+      &::after {
+        @include border-1px(5px, solid, $msv-black $msv-transparent $msv-transparent $msv-transparent);
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        
+      }
+    
+    }
+  }
+
+  .time-range-value {
+    width: 82%;
+    position: relative;
+  }
+
+  .fullscreen {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    
+  }
+  
+  .video {
+    width: 100%;
+  }
+
+  .display-flex {
+    display: flex;
+    position: relative;
+    margin-bottom: -1px;
+  }
+
+  .remove_overlay {
+    background: $msv-transparent;
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block !important;
+  }
+
+  .controls {
+    background: $volume-container-bg;
+  }
+
+  .time {
+    font-size: $msv-font-size-s;
+    color: $msv-white;
+    padding-left: 6px;
+    padding-right: 10px;
+  }
+  @media (max-width: $msv-breakpoint-l) {
+      margin-bottom: 40px;
+      padding-bottom: 0;
+  }
+  @media (max-width: $msv-breakpoint-m) {
+    .video-player .mt-5{
+      margin-top: 0rem!important;
+    }
+  }
+  @media (min-width: $msv-breakpoint-260) {
+    input[type="range"].time_range {
+      width: calc(100% - 224px);
+    }
+  }
+}

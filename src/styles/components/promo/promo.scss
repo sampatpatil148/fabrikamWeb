@@ -1,0 +1,101 @@
+@keyframes activePromo1 {
+	from {
+		left: -200%;
+	}
+	to {
+		left: 0;
+	}
+}
+@keyframes removePromo1 {
+	from {
+		left: 50%;
+	}
+	to {
+		left: -200%;
+	}
+}
+@keyframes activePromo2 {
+	from {
+		left: 200%;
+	}
+	to {
+		left: 0;
+	}
+}
+@keyframes removePromo2 {
+	from {
+		left: 50%;
+	}
+	to {
+		left: 200%;
+	}
+}
+.promo-header {
+	background: $msv-gray-1000;
+	@include border-1px(1px,solid, $msv-gray-1000);
+	font-size: 15px;
+	color: $msv-white;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	padding: 5px 0;
+}
+.promo-item {
+	position: relative;
+	display: none;
+}
+.promo-header-link {
+	a {
+		text-decoration: underline;
+		margin-left: 4px;
+		color: $msv-white;
+		&:hover {
+			color: $msv-white;
+		}
+		&:focus {
+			border: none !important;
+			outline: none !important;
+		}
+		&:focus-visible{
+			@include outline-1px(1px, dashed, $msv-white);
+			border-radius: 1px;
+		}
+	}
+}
+.activefirst {
+	display: block;
+	position: relative;
+	left: 0;
+}
+.active-promo1 {
+	display: block;
+	animation: activePromo1 .6s ease-in-out;
+	left: 0;
+	position: relative;
+}
+.remove-promo1 {
+	display: block;
+	animation: removePromo1 .6s ease-in-out;
+	left: -200%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+.active-promo2 {
+	display: block;
+	animation: activePromo2 .6s ease-in-out;
+	left: 0;
+	position: relative;
+}
+.remove-promo2 {
+	display: block;
+	animation: removePromo2 .6s ease-in-out;
+	left: 200%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}

@@ -1,0 +1,37 @@
+.ms-back-to-top {
+	@include width-height(48px, 48px);
+	@include border-outline-none;
+	position: relative;
+	i {
+		color: $msv-primary;
+		font-size: $msv-heading-text-size;
+		line-height: 24px;
+		position: absolute;
+    	left: 50%;
+    	top: 50%;
+    	transform: translate(-50%, -50%);
+	}
+}
+.backtotop {
+	background: $msv-gray-100;
+	@include border-1px(1px, solid, $msv-primary);
+	float: right;
+	margin-right: 24px;
+	margin-bottom: 10px;
+	border-radius: 2px;
+	bottom: 16px;
+	position: fixed;
+	right: 0;
+	a {
+		&:hover {
+			background-color: $msv-secondary-hover;
+			cursor: context-menu;
+		}
+	}
+}
+.backtotop-none {
+	display: none;
+}
+a.ms-back-to-top {
+	display: block;
+}

@@ -1,0 +1,111 @@
+.pagination-container {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    .pagination-item {
+        padding: 0 4px;
+        height: 32px;
+        text-align: center;
+        margin: auto 0px;
+        color: rgba(0, 0, 0, 0.87);
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+        letter-spacing: 0.01071em;
+        border-radius: 16px;;
+        line-height: 1.43px;
+        font-size: $msv-font-size-m;
+        &:focus{
+            @include outline-1px(1px, dashed, $msv-black);
+            border-radius: 0;
+        }
+        &.active {
+            text-decoration: underline;
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: transparent;
+        }
+        &.page-number-li {
+            margin-right: 14px !important;
+            padding-left: 4px!important;
+        }       
+        .page-number {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .arrow {
+            &::before {
+                @include width-height(0.4em, 0.4em);
+                position: relative;
+                content: '';
+                display: inline-block;
+                border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+                border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+            }
+        }
+        .arrow.left {
+            transform: rotate(-135deg) translate(-50%);
+            margin-right: 10px;
+            font-size: 32px;
+            font-weight: $msv-font-weight-bold;
+        }
+        .arrow.right {
+            transform: rotate(45deg);
+            margin-left: 10px;
+            font-size: 32px;
+            font-weight: $msv-font-weight-bold;
+        }
+        &.previous {
+            &.msc-page-item {
+                padding-left: 0;
+                margin-left: 0;
+                margin-right: auto;
+                font-size: $msv-font-size-m;
+                font-weight: $msv-font-weight-medium;
+                line-height: 19px;
+            }
+        }
+        &.next {
+            &.msc-page-item {
+                padding-right: 0;
+                margin-right: 0;
+                margin-left: auto;
+                font-size: $msv-font-size-m;
+                font-weight: $msv-font-weight-medium;
+                line-height: 6px;
+            }
+        }
+    }
+    .pagination-item.dots {
+        &:hover {
+            cursor: default;
+        }
+    }
+    .pagination-item.selected {
+        text-decoration: underline;
+        cursor: auto;
+    }
+    .pagination-item.disabled {
+        pointer-events: none;
+        color: #6e6c6c;
+        .arrow {
+            &::before {
+                border-right: 0.12em solid #6e6c6c;
+                border-top: 0.12em solid #6e6c6c;
+            }
+        }
+        &:hover {
+            background-color: transparent;
+            cursor: default;
+        }
+    }
+}
+.brackets {
+    font-weight: $msv-font-weight-bold;
+    &.m-l-4 {
+        margin-left: 5px;
+    }
+}

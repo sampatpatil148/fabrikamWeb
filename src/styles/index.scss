@@ -1,0 +1,32 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import './settings/index.scss';
+@import './components/header/header.scss';
+@import './components/header/searchbox.scss';
+@import './components/hero/hero.scss';
+@import './components/homeblock/homeblock.scss';
+@import './components/homeVideo/homeVideo.scss';
+@import './components/newseason/newseason.scss';
+
+@import './components/priceslider/priceSlider.scss';
+@import './components/productdetails/productDetails/productDetails.scss';
+@import './components/productdetails/productItemCarousel/productItemCarousel.scss';
+@import './components/productdetails/productReview/productReview.scss';
+@import './components/productdetails/productSlider/productSlider.scss';
+@import './components/productdetails/productSpecification/productSpecification.scss';
+@import './components/productfilter/filter.scss';
+@import './components/productfilter/mobileFilter.scss';
+@import './components/productlist/list.scss';
+@import './components/productlist/pagination.scss';
+@import './components/topHeader/tooHeader.scss';
+@import './components/promo/promo.scss';
+@import './components/footer/footer.scss';
+@import './components/backtotop/backtotop.scss';
+@import './components/chat/chat.scss';
+
+@import './library/breadCrumbs/breadCrumbs.scss';
+@import './library/carousel/carousel.scss';
+@import './library/imageGalleryZoom/imageGalleryZoom.scss';
+
+@import './pages/pdp.scss';
+
+@import './style.scss';

@@ -1,0 +1,27 @@
+.breadCrumbs {
+  ul {
+    padding: 0 0 15px 0;
+    margin: 0;
+    li {
+      color: $msv-black;
+      font-size: $msv-font-size-s;
+      display: inline-block;
+      list-style-type: none;
+      margin-right: 15px;
+      a {
+        color: $msv-black;
+        font-size: $msv-font-size-s;
+        position: relative;
+        &::after {
+          content: "/";
+          position: absolute;
+          margin-left: 5px;
+          top: 0;
+        }
+        &:focus {
+          outline: none !important;
+        }
+      }
+    }
+  }
+}

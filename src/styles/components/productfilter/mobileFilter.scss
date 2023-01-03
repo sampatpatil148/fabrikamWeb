@@ -1,0 +1,41 @@
+.mobileFilter-modal {
+	.ms-search-result-container__refiner-section {
+		width: 100%;
+		padding: 0;
+		display: block !important;
+	}
+	.ms-search-result-container__Sort-by-category {
+		position: inherit !important;
+		margin-bottom: 15px;
+		display: block !important;
+	}
+	.ms-sort-and-filter-modal-close.msc-btn {
+		color: $msv-white;
+		background-color: $msv-black;
+		border-color: $msv-black;
+		width: 100%;
+	}
+	.modal-title {
+		width: 100%;
+		text-align: center;
+	}
+	.ms-search-result-container__refine-menu {
+		.accordion-item {
+			background-color: $msv-white;
+		}
+		.accordion-button {
+			background-color: $msv-white !important;
+		}
+	}
+	.mobile-sorting {
+		background-color: $msv-gray-100 !important;
+		padding-bottom: 4px;
+	}
+	.modal-body {
+		height: 400px;
+		overflow-y: scroll;
+	}
+	ul li a:focus{
+        @include outline-1px(1px, dashed, $msv-black);
+    }
+}

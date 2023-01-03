@@ -1,0 +1,100 @@
+.ms-content-block__image img {
+  width: 100%;
+}
+.ms-content-block[data-m-layout="tile"] {
+  .ms-content-block__details {
+    padding-top: 20px;
+    .ms-content-block__cta,
+    &.textplacement__left .ms-content-block__details .ms-content-block__cta {
+      padding-top: 10px;
+    }
+  }
+}
+.col-sm:first-child .ms-content-block[data-m-layout="tile"]:first-child, .col-md:first-child .ms-content-block[data-m-layout="tile"]:first-child {
+  margin-left: 0;
+}
+.ms-content-block {
+  min-height: 150px;
+  &[data-m-layout="tile"] {
+      padding-bottom: 48px;
+      width: 100%;
+      .msc-cta__primary {
+          color: $msv-black;
+          @include fabrikam-font($msv-font-assistant, $msv-font-weight-normal, $msv-font-size-m, $msv-text-line-height);
+          border-color: $msv-transparent;
+          background-color: $msv-transparent;
+          display: inline-block;
+          &:focus{
+              @include outline-1px(1px, solid, $msv-transparent);
+          }
+          &:focus-visible {
+              @include outline-1px(1.5px, solid, $msv-black);
+              border-radius: 1px;
+              padding-bottom: 3px;
+            }
+      }
+  }
+}
+.fs-18px {
+  font-size: $msv-font-size-l;
+}
+.mr-0 {
+  margin-right: 0 !important;
+}
+.new-season {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .ms-text-block {
+    color: $msv-black;
+    line-height: normal;
+    &.alignment__center {
+        text-align: center;
+    }
+    &.fontsize__extralarge {
+        font-size: $msv-font-size-xl;
+    }
+}
+  @media (min-width: $msv-container-max-width-s) {
+    .col-md {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+      padding: 0;
+    }
+    .col-12 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  @media (max-width: $msv-breakpoint-m) {
+    .ms-text-block.alignment__center.fontsize__extralarge.mt-5 {
+      margin-top: 2rem!important;
+    }
+    .ms-content-block__cta{
+      padding-top: 0!important;
+    }
+    .ms-content-block[data-m-layout=tile] .ms-content-block__details{
+      padding-top: 10px;
+    }
+  }
+  @media (min-width: $msv-breakpoint-1920) {
+    .row {
+      justify-content: space-between;
+      column-gap: 50px;
+    }
+  }
+  @media (min-width: $msv-breakpoint-1366) {
+    .row {
+      justify-content: space-between;
+      column-gap: 15px;
+    }
+  }
+  @media (min-width: $msv-breakpoint-1920) and (max-width: $msv-breakpoint-1920) {
+    .row {
+      justify-content: space-between;
+      column-gap: 50px;
+    }
+  }
+}

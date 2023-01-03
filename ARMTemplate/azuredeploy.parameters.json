@@ -1,0 +1,53 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "value": "RetailDemoNew"
+        },
+        "location": { 
+            "value": "westus2"
+        },   
+        "sku": {
+            "value": "Free"
+        },
+        "skucode": {
+            "value": "Free"
+        },
+        "repositoryUrl": {
+            "value": "https://retailindustry@dev.azure.com/retailindustry/fabrikam/_git/fabrikamWeb"
+        },
+        "branch": {
+            "value": "main"
+        },
+        "repositoryToken": {
+            "reference": {
+                "keyVault": {                    
+                    "id": "/subscriptions/86654fd1-8e3a-4dfa-81ea-b36a9a26965a/resourceGroups/mscloudforretailB2C/providers/Microsoft.KeyVault/vaults/retailDemoKeyVault"
+                },
+                "secretName": "repositoryTokenRetailDemo"
+            }
+        },
+        "appLocation": {
+            "value": "/"
+        },
+        "apiLocation": {
+            "value": "api"
+        },
+        "appArtifactLocation": {
+            "value": "/build"
+        },
+        "appSettings": {
+            "value": {
+                "APPINSIGHTS_INSTRUMENTATIONKEY": "272aa853-877c-4cdb-9975-87ae60f2e6ca",
+                "EnvironmentId": "3a90e016-76bb-4ffa-0011-000000000500",
+                "MIR_ENDPOINT": "recointweeuon2on1-anon.int.reco.microsoft.com",
+                "REACT_APP_APIURL": "https://thankful-wave-0e341ee1e.azurestaticapps.net/json/",
+                "SearchApiKey": "2AAF52702E8675B6845930C49F1EC5F7",
+                "SearchFacets": "category1*,Price-,Color,Size,Gender*,AgeGroup,category2*,Material,Style",
+                "SearchIndexName": "fabrikam-fashion",
+                "SearchServiceName": "retaildemocogsearchsemantic"
+            }
+        }
+    }
+}

@@ -1,0 +1,146 @@
+@mixin ms-search_-icon-msc-btn_ms-search_-form-cancelSearch {
+	background-color: $msv-transparent;
+	color: $msv-black;
+	font-weight: $msv-font-weight-normal;
+	font-size: $msv-font-size-m;
+	@include border-outline-none;
+	line-height: 21px;
+}
+.ms-search__icon.msc-btn {
+	@include ms-search_-icon-msc-btn_ms-search_-form-cancelSearch;
+	padding: 0.82rem 0.5rem 0.7rem 0.5rem;
+}
+.ms-search__form-cancelSearch {
+	@include ms-search_-icon-msc-btn_ms-search_-form-cancelSearch;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.ms-search__searchForm {
+	display: flex;
+	height: 48px;
+	justify-content: flex-end;
+}
+ul.react-autosuggest__suggestions-list {
+	padding: 0px;
+}
+.autocomplete {
+	min-width: 304px;
+}
+.react-autosuggest__suggestions-container--open {
+	border: 1px solid $msv-gray-300;
+	background-color: $msv-gray-100;
+	z-index: 999;
+	position: relative;
+}
+@mixin ms-search__form-control_react-autosuggest-input {
+	background-color: $msv-gray-100;
+	font-size: $msv-font-size-m;
+	color: $msv-black;
+	border: 1px dashed $msv-black;
+	@include width-height(100%, 48px);
+	order: 0;
+	padding: 0 8px;
+}
+.react-autosuggest__input {
+	@include ms-search__form-control_react-autosuggest-input;
+	&:focus-visible {
+		border: none;
+		@include outline-1px(1px, dashed, $msv-black);
+		margin: 0 1px;
+	}
+}
+.ms-search__form-control {
+	@include ms-search__form-control_react-autosuggest-input;
+	&:focus-visible,
+	&:focus-visible .ms-search__label.bx-show {
+		@include outline-1px(1px,dashed, $msv-black);
+		outline-offset: -1px;
+		border: none !important;
+	}
+	&:focus {
+		.ms-search__form-control,
+		.search-form {
+			@include border-outline-none;
+		}
+	}
+}
+.react-autosuggest__suggestion {
+	display: flex;
+	font-size: $msv-font-size-m;
+	@include width-height(100%, 48px);
+	div {		
+		width: 100%;
+		a {
+			color: $msv-black;
+			text-decoration: none;
+			display: block;
+		    padding: 10px;
+			&:hover {
+				background-color: $msv-gray-200;
+				text-decoration: underline;
+			}
+			&:focus {
+				@include outline-1px(1px, dashed, $msv-black);
+			}
+		}
+	}
+	&:hover {
+		background-color: $msv-gray-200;
+		width: 100%;
+		text-decoration: underline;
+	}
+}
+.react-autosuggest__suggestions {
+	padding: 0;
+	margin: 0;
+}
+.ms-search__form-submitSearch {
+	background-color: $msv-primary;
+	color: $msv-white;
+	@include  width-height(48px, 48px);
+	@include border-1px(1px, solid, $msv-primary);
+	@include outline-1px(1px, solid, $msv-primary);
+	border-radius: 0;
+	padding: 0 0 0 8px;
+}
+.ms-search__label.bx-show {
+	height: 48px;
+	.search-form {
+		position: relative;
+		bottom: 0px;
+	}
+	.fa-search.fa-1 {
+		transform: rotate(90deg) translate(0px, 5px);
+	}
+	&:focus {
+		@include outline-1px(1px,dashed, $msv-black);
+	}
+	a:not(.nav-link):focus,
+.msc-l-dropdown:not(.nav-link):focus, .dropdown-toggle:focus {
+    @include border-1px(1px, dashed, $msv-white);
+    @include outline-1px(1px, dashed, $msv-black);
+}
+}
+.search-form {
+	position: relative;
+	bottom: 11px;
+}
+.msc-btn {
+	&:focus {
+		@include border-1px(1px, solid, $msv-white);
+		@include outline-1px(1px, dashed, $msv-black);
+	}
+}
+@media screen and (max-width: $msv-breakpoint-l) {
+	.autocomplete {
+		min-width: inherit;
+        width: -webkit-fill-available;
+	}
+	.ms-search__icon.msc-btn {
+		padding: 0.82rem 0.5rem 0.7rem 1.6rem;
+	}
+	.react-autosuggest__suggestion{
+		height: auto!important;
+	}
+}
