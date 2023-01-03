@@ -1,0 +1,55 @@
+{
+    "routes": [      
+      {
+        "route": "/productlist",
+        "rewrite": "/productlist"
+      }, 
+      {
+        "route": "/fabrikam-fashion/*",
+        "rewrite": "/productlist"
+      }, 
+      {
+        "route": "/search/*",
+        "rewrite": "/productlist"
+      },
+      {
+        "route": "/pdp/*",
+        "rewrite": "/pdp"
+      },      
+      {
+        "route": "/images/*",
+        "headers": {
+          "cache-control": "must-revalidate, max-age=15770000"
+        }
+      },     
+      {
+        "route": "/api/*"
+      }
+    ],
+    "navigationFallback": {
+        "rewrite": "/index.html",
+        "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
+      },
+      "responseOverrides": {
+        "400": {
+          "rewrite": "/invalid-invitation-error.html"
+        },
+        "401": {
+          "redirect": "/login",
+          "statusCode": 302
+        },
+        "403": {
+          "rewrite": "/custom-forbidden-page.html"
+        },
+        "404": {
+          "rewrite": "/404.html"
+        }
+      },    
+    "globalHeaders": {
+        "Access-Control-Allow-Origin": "https://thankful-wave-0e341ee1e.azurestaticapps.net",
+        "Access-Control-Allow-Methods": "POST, GET, OPTIONS"
+      },
+    "mimeTypes": {
+      ".json": "text/json"
+    }
+  }
