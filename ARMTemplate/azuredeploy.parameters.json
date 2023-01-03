@@ -43,10 +43,10 @@
                 "EnvironmentId": "3a90e016-76bb-4ffa-0011-000000000500",
                 "MIR_ENDPOINT": "recointweeuon2on1-anon.int.reco.microsoft.com",
                 "REACT_APP_APIURL": "https://thankful-wave-0e341ee1e.azurestaticapps.net/json/",
-                "SearchApiKey": "2AAF52702E8675B6845930C49F1EC5F7",
+                "SearchApiKey": "xyCwmuNc5YROpUj7B0KT7PLxZGAthstTrMst9btB1EAzSeCgsRfa",
                 "SearchFacets": "category1*,Price-,Color,Size,Gender*,AgeGroup,category2*,Material,Style",
                 "SearchIndexName": "fabrikam-fashion",
-                "SearchServiceName": "retaildemocogsearchsemantic"
+                "SearchServiceName": "retailcogsearchdemofactory"
             }
         }
     }
