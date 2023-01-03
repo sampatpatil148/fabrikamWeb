@@ -10,7 +10,7 @@ steps:
   
   - task: AzurePowerShell@4
     inputs:
-      azureSubscription: 'Microsoft Azure Sponsorship 2'
+      azureSubscription: 'Microsoft Azure Sponsorship 2-from 15th April'
       scriptType: 'FilePath'
       scriptPath: 'ARMTemplate/set-pipelineenvironmenttoken.ps1'
       scriptArguments: ' ResourceGroupName mscloudforretailB2C '
